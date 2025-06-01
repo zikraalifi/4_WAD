@@ -1,0 +1,90 @@
+/* Reset box sizing */
+* {
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: #f9f9f9;
+  color: #333;
+  margin: 0;
+  padding: 20px;
+  max-width: 900px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Headings */
+h1 {
+  font-size: 2.4rem;
+  margin-bottom: 0.3em;
+  color: #2c3e50;
+  text-align: center;
+  font-weight: 700;
+}
+
+h2 {
+  font-size: 1.6rem;
+  margin-top: 2em;
+  margin-bottom: 0.6em;
+  color: #34495e;
+  border-bottom: 2px solid #3498db;
+  padding-bottom: 0.3em;
+  font-weight: 600;
+}
+
+h3 {
+  font-size: 1.2rem;
+  margin-top: 2em;
+  margin-bottom: 0.5em;
+  font-weight: 600;
+  color: #34495e;
+}
+
+/* Paragraphs */
+p {
+  font-size: 1rem;
+  margin-bottom: 1em;
+  color: #555;
+}
+
+/* Lists */
+ul, ol {
+  margin-left: 1.4em;
+  margin-bottom: 1em;
+  color: #555;
+}
+
+ul li, ol li {
+  margin-bottom: 0.5em;
+  line-height: 1.4;
+}
+
+/* Images */
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto 2em auto;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+/* Horizontal rule */
+hr {
+  margin: 3em 0;
+  border: none;
+  border-top: 1px solid #ddd;
+}
+
+/* Links */
+a {
+  color: #3498db;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
