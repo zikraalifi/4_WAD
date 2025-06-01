@@ -3,7 +3,7 @@
 @section('content')
 <div class="container mt-4">
     <div class="schedule-header">
-        <h2 class="schedule-title">Daftar Jadwal Konsultasi</h2>
+        <h2 class="schedule-title">Daftar Jadwal</h2>
         <a href="{{ route('jadwal.create') }}" class="btn btn-add">
             <i class="bi bi-plus"></i> Tambah Jadwal Baru
         </a>
