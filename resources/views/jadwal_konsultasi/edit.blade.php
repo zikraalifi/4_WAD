@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="container mt-4">
-    <h2>Edit Jadwal Konsultasi</h2>
+    <h2>Mengedit Jadwal Konsultasi</h2>
 
     @if ($errors->any())
         <div class="alert alert-danger">
