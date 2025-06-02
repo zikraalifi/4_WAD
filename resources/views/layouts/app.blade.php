@@ -21,9 +21,7 @@
                 <li>
                     <a href="{{ route('medicines.create') }}" class="text-gray-700 hover:text-blue-600 font-medium">Tambah Obat</a>
                 </li>
-                <li>
-                    <a href="{{ route('medicines.index') }}" class="text-gray-700 hover:text-blue-600 font-medium">Manajemen Obat</a>
-                </li>
+                
             </ul>
         </div>
     </nav>
