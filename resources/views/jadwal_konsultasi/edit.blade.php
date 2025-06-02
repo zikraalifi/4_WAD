@@ -1,5 +1,9 @@
 @extends('layouts.app') {{-- Sesuaikan dengan nama layout template Anda --}}
 
+@php
+    dd($jadwalKonsultasi); 
+@endphp
+
 @section('content')
 <div class="container mt-4">
     <h2>Mengedit Jadwal Konsultasi</h2>
@@ -14,7 +18,8 @@
         </div>
     @endif
 
-    <form action="{{ route('jadwal.update', $jadwalKonsultasi->id) }}" method="POST">
+    {{-- BARIS INI SUDAH BENAR: Meneruskan objek $jadwalKonsultasi secara langsung --}}
+    <form action="{{ route('jadwal.update', $jadwalKonsultasi) }}" method="POST">
         @csrf
         @method('PUT')
         <div class="mb-3">
@@ -27,10 +32,12 @@
         </div>
         <div class="mb-3">
             <label for="tanggal" class="form-label">Tanggal:</label>
-            <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{ old('tanggal', $jadwalKonsultasi->tanggal) }}" required>
+            {{-- Pastikan format tanggal sesuai dengan input type="date" (YYYY-MM-DD) --}}
+            <input type="date" class="form-control" id="tanggal" name="tanggal" value="{{ old('tanggal', $jadwalKonsultasi->tanggal->format('Y-m-d')) }}" required>
         </div>
         <div class="mb-3">
             <label for="jam" class="form-label">Jam:</label>
+            {{-- Pastikan format jam sesuai dengan input type="time" (HH:MM) --}}
             <input type="time" class="form-control" id="jam" name="jam" value="{{ old('jam', \Carbon\Carbon::parse($jadwalKonsultasi->jam)->format('H:i')) }}" required>
         </div>
         <button type="submit" class="btn btn-success">Update Jadwal</button>

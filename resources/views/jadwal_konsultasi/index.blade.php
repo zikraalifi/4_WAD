@@ -36,9 +36,12 @@
                         <td class="text-center">{{ \Carbon\Carbon::parse($jadwal->tanggal)->format('d-m-Y') }}</td>
                         <td class="text-center">{{ \Carbon\Carbon::parse($jadwal->jam)->format('H:i') }}</td>
                         <td class="action-buttons">
+                            {{-- Tombol Edit dihilangkan atau dikomentari --}}
+                            {{--
                             <a href="{{ route('jadwal.edit', $jadwal->id) }}" class="btn btn-edit">
                                 <i class="bi bi-pencil"></i> Edit
                             </a>
+                            --}}
                             <form action="{{ route('jadwal.destroy', $jadwal->id) }}" method="POST">
                                 @csrf
                                 @method('DELETE')
@@ -115,11 +118,11 @@
         transform: translateY(-1px);
     }
 
-    .btn-edit {
-        background-color: #f39c12;
-        color: white;
-        border: none;
-    }
+    /* .btn-edit { */
+        /* background-color: #f39c12; */
+        /* color: white; */
+        /* border: none; */
+    /* } */
 
     .btn-cancel {
         background-color: #e74c3c;
